@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Modular2024.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Entry x:Name="userInput" Keyboard="Numeric" Placeholder="Введите 6-значное число" Text=""/>
+            <Button
+                x:Name="check"
+                Text="Проверить" 
+                Clicked="CheckGuess"
+                HorizontalOptions="Fill" />
+            <Button
+                x:Name="newGame"
+                Text="Новая игра"
+                Clicked="NewGame"
+                HorizontalOptions="Fill" />
+            <VerticalStackLayout>
+                <Label x:Name="bullsText"/>
+                <Label x:Name="cowsText"/>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -32,9 +32,13 @@
 
         void GenerateNumber()
         {
-            for (int i = 0; i < 6; i++)
+            while (number.Length != 6)
             {
-                number += Convert.ToDouble(new Random().NextInt64(10));
+                int digit = new Random().Next(10);
+                if (!number.Contains(digit.ToString()))
+                {
+                    number += digit.ToString();
+                }
             }
         }
 
